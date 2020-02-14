@@ -237,7 +237,7 @@ ul {
 .square {
   position: absolute;
   width: 50vw;
-  height: 48vh;
+  height: 500px;
   background-color: $light-grayish-blue;
   border-bottom-left-radius: 60px;
   top: 0;
@@ -245,7 +245,7 @@ ul {
   z-index: -1;
 }
 
-@media (max-width: 375px) {
+@media (min-width: 360px) and (max-width: 575.98px) {
 
   .navbar {
     position: relative;
@@ -254,12 +254,6 @@ ul {
 
     .navbar__list {
       display: none;
-    }
-
-    .navbar__mobile {
-      display: block;
-      cursor: pointer;
-      grid-column: 12;
     }
 
     .navbar__list__li {
@@ -280,7 +274,7 @@ ul {
 
       background-color: #fff;
       box-shadow: 0px 8px 20px -2px rgb(105, 105, 105);
-      width: 86vw;
+      width: 85vw;
       transition: opacity 350ms;
     }
 
@@ -296,10 +290,14 @@ ul {
       border-radius: none;
     }
 
+
     .navbar__mobile {
+      display: block;
+      cursor: pointer;
       position: relative;
       place-self: start;
       padding-top: 10px;
+      grid-column: 11 / end;
     }
 
     .navbar__icon {
@@ -357,7 +355,22 @@ ul {
   }
 
   .square {
-    height: 74vh;
+    height: 485px;
   }
 
+}
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+@media (min-width: 1200px) {
+  .square {
+    height: 400px;
+  }
 }
