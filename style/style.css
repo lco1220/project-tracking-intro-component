@@ -212,7 +212,8 @@ ul {
   color: #fff;
   background-color: #ff5c5c;
   border-radius: 5px;
-  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
   -webkit-transition: opacity .5s;
   transition: opacity .5s;
 }
@@ -223,7 +224,8 @@ ul {
 
 .main .hero__button--white {
   color: #a0a1ac;
-  letter-spacing: 1px;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 3px;
 }
 
 .main .hero__img {

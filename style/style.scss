@@ -208,7 +208,8 @@ ul {
     color: #fff;
     background-color: $primary-red;
     border-radius: 5px;
-    font-weight: 700;
+    font-family: $primary-font;
+    font-weight: bold;
     transition: opacity .5s;
 
     &:hover {
@@ -219,7 +220,8 @@ ul {
 
   .hero__button--white {
     color: $grayish-blue;
-    letter-spacing: 1px;
+    font-family: $primary-font;
+    letter-spacing: 3px;
   }
 
   .hero__img {
