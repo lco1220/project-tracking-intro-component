@@ -62,7 +62,7 @@ ul {
   }
 
   .navbar__links {
-    grid-column: 7;
+    grid-column: 6;
   }
 
   .navbar__mobile {
@@ -149,14 +149,14 @@ ul {
 
 .main {
   grid-area: main;
-  grid-template-columns: repeat(auto-fill, 150px);
+  grid-template-columns: repeat(auto-fill, 50px);
   // grid: ". content . image" / 150px auto 60px 690px;
   align-items: center;
   padding-bottom: 100px;
 
   .hero__content {
     font-family: $primary-font;
-    grid-column: 2 / 5;
+    grid-column: 4 / 13;
     grid-row-gap: 20px;
   }
 
@@ -180,7 +180,7 @@ ul {
 
   .hero__title {
     color: $very-dark-blue;
-    font-size: 3rem;
+    font-size: 3.3rem;
     text-transform: uppercase;
   }
 
@@ -223,20 +223,19 @@ ul {
   }
 
   .hero__img {
-    grid-column: 5 / 10;
-    padding-left: 150px;
+    grid-column: 15 / end;
   }
 
   .figure__image {
     // width: 885px;
-    width: 60vw;
+    width: 62vw;
   }
 
 }
 
 .square {
   position: absolute;
-  width: 50vw;
+  width: 48vw;
   height: 500px;
   background-color: $light-grayish-blue;
   border-bottom-left-radius: 60px;
@@ -364,10 +363,109 @@ ul {
 // @media (min-width: 576px) and (max-width: 767.98px) { ... }
 
 // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) and (max-width: 991.98px) { ... }
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+  .navbar {
+    grid-template-columns: repeat(auto-fill, 50px);
+
+    .navbar__logo {
+      grid-column: 3;
+    }
+
+    .navbar__links {
+      grid-column: 9 /end;
+    }
+
+    .navbar__list {
+      grid-template-columns: repeat(3, 70px) 30px 70px;
+    }
+
+    .navbar__link {
+      font-size: 0.8rem;
+    }
+
+  }
+
+  .main {
+
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 5em;
+
+    .hero__content {
+      grid-column: 3 / 14;
+      grid-row: 2;
+      grid-row-gap: 18px;
+    }
+
+    .hero__img {
+      grid-column: 3 / end;
+      grid-row: 1;
+    }
+
+    .figure__image {
+      width: 75vw;
+    }
+  }
+
+  .square {
+    width: 52vw;
+    height: 50vh;
+  }
+
+}
 
 // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) and (max-width: 1199.98px) { ... }
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+  .navbar {
+    grid-template-columns: repeat(auto-fill, 50px);
+
+    .navbar__logo {
+      grid-column: 3;
+    }
+
+    .navbar__links {
+      grid-column: 13 /21;
+    }
+
+    .navbar__list {
+      grid-template-columns: repeat(3, 75px) 30px 75px;
+    }
+
+    .navbar__link {
+      font-size: 0.9rem;
+    }
+
+  }
+
+  .main {
+
+    .hero__content {
+      grid-column: 3 / 11;
+      grid-row-gap: 18px;
+    }
+
+    .hero__title {
+      font-size: 3rem;
+    }
+
+    .hero__button {
+      font-size: 0.8rem;
+      padding: 10px 14px;
+    }
+
+    .hero__img {
+      grid-column: 12 / end;
+    }
+
+  }
+
+  .square {
+    height: 35vw;
+  }
+
+
+ }
 
 @media (min-width: 1200px) {
   .square {
